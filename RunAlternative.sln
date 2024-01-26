@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34320.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run-Alternative", "RunAlternative\Run-Alternative.csproj", "{7EF8D2F0-A8D0-49C0-9821-A2583EEB3CD9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RA-Setup", "RA-Setup\RA-Setup.vdproj", "{ECF010BF-7DF7-4CD7-A1B8-B5B8B0574039}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF8D2F0-A8D0-49C0-9821-A2583EEB3CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF8D2F0-A8D0-49C0-9821-A2583EEB3CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF8D2F0-A8D0-49C0-9821-A2583EEB3CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF8D2F0-A8D0-49C0-9821-A2583EEB3CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF010BF-7DF7-4CD7-A1B8-B5B8B0574039}.Debug|Any CPU.ActiveCfg = Debug
+		{ECF010BF-7DF7-4CD7-A1B8-B5B8B0574039}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3997DA52-2992-486E-8EE5-0B6C6B8137DF}
+	EndGlobalSection
+EndGlobal
