@@ -1,0 +1,16 @@
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\RunAlternative.exe.config
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\RunAlternative.exe
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\RunAlternative.pdb
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.csprojAssemblyReference.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.Properties.Resources.resources
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.csproj.GenerateResource.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.csproj.CoreCompileInputs.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.exe
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.pdb
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.csproj.CopyComplete
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\System.Drawing.Common.dll
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\Wpf.Ui.dll
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\System.Drawing.Common.xml
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Debug\Wpf.Ui.xml
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.RA_About.resources
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Debug\RunAlternative.RA_Main.resources

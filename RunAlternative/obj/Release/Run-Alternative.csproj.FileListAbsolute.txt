@@ -1,0 +1,10 @@
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Release\RunAlternative.exe.config
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Release\RunAlternative.exe
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\bin\Release\RunAlternative.pdb
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\RunAlternative.Properties.Resources.resources
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\Run-Alternative.csproj.GenerateResource.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\Run-Alternative.csproj.CoreCompileInputs.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\RunAlternative.exe
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\RunAlternative.pdb
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\Run-Alternative.csprojAssemblyReference.cache
+C:\Users\yavuz\source\repos\RunAlternative\RunAlternative\obj\Release\RunAlternative.RA.resources
