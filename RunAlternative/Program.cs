@@ -24,12 +24,10 @@ namespace RunAlternative
         {
             RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
             regKey.SetValue("AktifProgram", Application.ExecutablePath);
-          
-            // Program açıldığında ön plana getirin
-            SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);
+            SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RA());
+            Application.Run(new RA());           
         }
     }
 }

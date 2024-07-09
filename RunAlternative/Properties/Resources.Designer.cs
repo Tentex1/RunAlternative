@@ -63,10 +63,20 @@ namespace RunAlternative.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap CalculatorIcon {
+        internal static System.Drawing.Bitmap DirectorySearchIcon {
             get {
-                object obj = ResourceManager.GetObject("CalculatorIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("DirectorySearchIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   (Simge) öğesine benzeyen System.Drawing.Icon türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Icon Folder {
+            get {
+                object obj = ResourceManager.GetObject("Folder", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -76,6 +86,16 @@ namespace RunAlternative.Properties {
         internal static System.Drawing.Bitmap GoogleIcon {
             get {
                 object obj = ResourceManager.GetObject("GoogleIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap GoogleIconBlack {
+            get {
+                object obj = ResourceManager.GetObject("GoogleIconBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,16 +116,6 @@ namespace RunAlternative.Properties {
         internal static System.Drawing.Bitmap SearchPNG {
             get {
                 object obj = ResourceManager.GetObject("SearchPNG", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap YandexIcon {
-            get {
-                object obj = ResourceManager.GetObject("YandexIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

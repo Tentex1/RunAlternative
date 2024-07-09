@@ -108,10 +108,24 @@
     <None Include="assets\SearchIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\YandexIcon.png" />
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\CalculatorIcon.png" />
+    <None Include="assets\DirectorySearchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\GoogleIconBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

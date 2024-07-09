@@ -43,31 +43,35 @@ namespace RunAlternative
             this.ProcessPanelLabel = new System.Windows.Forms.Label();
             this.ProcessPanelIcon = new System.Windows.Forms.PictureBox();
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.ContextSTNIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CSTMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchIcon = new System.Windows.Forms.PictureBox();
+            this.CSTMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContextSTNIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ProgramList = new System.Windows.Forms.ListView();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ProcessPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessPanelIcon)).BeginInit();
-            this.ContextSTNIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
+            this.ContextSTNIcon.SuspendLayout();
             this.SuspendLayout();
             // 
             // CommandBox
             // 
-            this.CommandBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.CommandBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.CommandBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CommandBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CommandBox.Font = new System.Drawing.Font("Arial", 20F);
+            this.CommandBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CommandBox.ForeColor = System.Drawing.Color.White;
-            this.CommandBox.Location = new System.Drawing.Point(12, 8);
+            this.CommandBox.Location = new System.Drawing.Point(7, 7);
             this.CommandBox.MaxLength = 45;
             this.CommandBox.Name = "CommandBox";
-            this.CommandBox.Size = new System.Drawing.Size(508, 31);
+            this.CommandBox.Size = new System.Drawing.Size(531, 32);
             this.CommandBox.TabIndex = 1;
             this.CommandBox.TextChanged += new System.EventHandler(this.CommandBox_TextChanged);
             // 
             // EnterButton
             // 
+            this.EnterButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.EnterButton.Location = new System.Drawing.Point(603, 24);
             this.EnterButton.Name = "EnterButton";
             this.EnterButton.Size = new System.Drawing.Size(75, 23);
@@ -89,6 +93,7 @@ namespace RunAlternative
             // 
             // ProcessPanel
             // 
+            this.ProcessPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ProcessPanel.Controls.Add(this.ProcessPanelDesLabel);
             this.ProcessPanel.Controls.Add(this.ProcessPanelLabel);
             this.ProcessPanel.Controls.Add(this.ProcessPanelIcon);
@@ -103,7 +108,7 @@ namespace RunAlternative
             this.ProcessPanelDesLabel.AutoSize = true;
             this.ProcessPanelDesLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.ProcessPanelDesLabel.ForeColor = System.Drawing.Color.White;
-            this.ProcessPanelDesLabel.Location = new System.Drawing.Point(54, 25);
+            this.ProcessPanelDesLabel.Location = new System.Drawing.Point(56, 27);
             this.ProcessPanelDesLabel.Name = "ProcessPanelDesLabel";
             this.ProcessPanelDesLabel.Size = new System.Drawing.Size(321, 16);
             this.ProcessPanelDesLabel.TabIndex = 2;
@@ -112,10 +117,10 @@ namespace RunAlternative
             // ProcessPanelLabel
             // 
             this.ProcessPanelLabel.AutoSize = true;
-            this.ProcessPanelLabel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ProcessPanelLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ProcessPanelLabel.Font = new System.Drawing.Font("Arial", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ProcessPanelLabel.ForeColor = System.Drawing.Color.White;
-            this.ProcessPanelLabel.Location = new System.Drawing.Point(52, 0);
+            this.ProcessPanelLabel.Location = new System.Drawing.Point(56, 0);
             this.ProcessPanelLabel.Name = "ProcessPanelLabel";
             this.ProcessPanelLabel.Size = new System.Drawing.Size(195, 26);
             this.ProcessPanelLabel.TabIndex = 1;
@@ -123,11 +128,12 @@ namespace RunAlternative
             // 
             // ProcessPanelIcon
             // 
-            this.ProcessPanelIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProcessPanelIcon.BackgroundImage")));
-            this.ProcessPanelIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ProcessPanelIcon.Location = new System.Drawing.Point(12, 6);
+            this.ProcessPanelIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.ProcessPanelIcon.BackgroundImage = global::RunAlternative.Properties.Resources.GoogleIcon;
+            this.ProcessPanelIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ProcessPanelIcon.Location = new System.Drawing.Point(7, 0);
             this.ProcessPanelIcon.Name = "ProcessPanelIcon";
-            this.ProcessPanelIcon.Size = new System.Drawing.Size(35, 35);
+            this.ProcessPanelIcon.Size = new System.Drawing.Size(47, 46);
             this.ProcessPanelIcon.TabIndex = 0;
             this.ProcessPanelIcon.TabStop = false;
             // 
@@ -135,6 +141,23 @@ namespace RunAlternative
             // 
             this.NotifyIcon.Text = "Show";
             this.NotifyIcon.Visible = true;
+            // 
+            // SearchIcon
+            // 
+            this.SearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchIcon.Image = global::RunAlternative.Properties.Resources.SearchPNG;
+            this.SearchIcon.Location = new System.Drawing.Point(546, 15);
+            this.SearchIcon.Name = "SearchIcon";
+            this.SearchIcon.Size = new System.Drawing.Size(15, 15);
+            this.SearchIcon.TabIndex = 2;
+            this.SearchIcon.TabStop = false;
+            // 
+            // CSTMenuItem1
+            // 
+            this.CSTMenuItem1.Name = "CSTMenuItem1";
+            this.CSTMenuItem1.Size = new System.Drawing.Size(92, 22);
+            this.CSTMenuItem1.Text = "Exit";
+            this.CSTMenuItem1.Click += new System.EventHandler(this.ContextSTNIcon_Click);
             // 
             // ContextSTNIcon
             // 
@@ -144,32 +167,47 @@ namespace RunAlternative
             this.ContextSTNIcon.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.ContextSTNIcon.Size = new System.Drawing.Size(93, 26);
             // 
-            // CSTMenuItem1
+            // ProgramList
             // 
-            this.CSTMenuItem1.Name = "CSTMenuItem1";
-            this.CSTMenuItem1.Size = new System.Drawing.Size(92, 22);
-            this.CSTMenuItem1.Text = "Exit";
-            this.CSTMenuItem1.Click += new System.EventHandler(this.ContextSTNIcon_Click);
+            this.ProgramList.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.ProgramList.AutoArrange = false;
+            this.ProgramList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.ProgramList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProgramList.Font = new System.Drawing.Font("Arial", 15.25F, System.Drawing.FontStyle.Bold);
+            this.ProgramList.ForeColor = System.Drawing.Color.White;
+            this.ProgramList.HideSelection = false;
+            this.ProgramList.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.ProgramList.LargeImageList = this.ImageList;
+            this.ProgramList.Location = new System.Drawing.Point(7, 95);
+            this.ProgramList.Name = "ProgramList";
+            this.ProgramList.Size = new System.Drawing.Size(572, 330);
+            this.ProgramList.TabIndex = 3;
+            this.ProgramList.UseCompatibleStateImageBehavior = false;
+            this.ProgramList.View = System.Windows.Forms.View.Details;
             // 
-            // SearchIcon
+            // ImageList
             // 
-            this.SearchIcon.BackgroundImage = global::RunAlternative.Properties.Resources.SearchPNG;
-            this.SearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchIcon.Location = new System.Drawing.Point(529, 4);
-            this.SearchIcon.Name = "SearchIcon";
-            this.SearchIcon.Size = new System.Drawing.Size(35, 35);
-            this.SearchIcon.TabIndex = 2;
-            this.SearchIcon.TabStop = false;
-            this.SearchIcon.Click += new System.EventHandler(this.SearchIcon_Click);
+            this.ImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ImageList.ImageSize = new System.Drawing.Size(32, 32);
+            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(554, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(18, 351);
+            this.panel1.TabIndex = 4;
             // 
             // RA
             // 
             this.AcceptButton = this.EnterButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(572, 46);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.ClientSize = new System.Drawing.Size(572, 571);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ProgramList);
             this.Controls.Add(this.SearchIcon);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.ProcessPanel);
@@ -177,8 +215,9 @@ namespace RunAlternative
             this.Controls.Add(this.CommandBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(480, 300);
             this.Name = "RA";
-            this.Opacity = 0.9D;
+            this.Opacity = 0.95D;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RunAlternative";
@@ -187,8 +226,8 @@ namespace RunAlternative
             this.ProcessPanel.ResumeLayout(false);
             this.ProcessPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessPanelIcon)).EndInit();
-            this.ContextSTNIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).EndInit();
+            this.ContextSTNIcon.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,11 +240,14 @@ namespace RunAlternative
         private System.Windows.Forms.PictureBox ProcessPanelIcon;
         public System.Windows.Forms.Label ProcessPanelLabel;
         private System.Windows.Forms.NotifyIcon NotifyIcon;
-        private System.Windows.Forms.ContextMenuStrip ContextSTNIcon;
-        private System.Windows.Forms.ToolStripMenuItem CSTMenuItem1;
         private System.Windows.Forms.PictureBox SearchIcon;
         private System.Windows.Forms.Label ProcessPanelDesLabel;
         public System.Windows.Forms.Panel ProcessPanel;
+        private ToolStripMenuItem CSTMenuItem1;
+        private ContextMenuStrip ContextSTNIcon;
+        private ListView ProgramList;
+        private ImageList ImageList;
+        private Panel panel1;
     }
 }
 
