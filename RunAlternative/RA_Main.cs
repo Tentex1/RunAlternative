@@ -23,7 +23,19 @@ namespace RunAlternative
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
 
         [DllImport("user32.dll")]
-        private static extern bool UnregisterHotKey(IntPtr hWnd, int id);        
+        private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        // Formun handle'ını almak için
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
+
+        // ShowWindow için sabitler
+        private const int SW_HIDE = 0;
+        private const int SW_SHOW = 5;
+
 
         private const int MOD_NONE = 0x0000;
         private const int MOD_ALT = 0x0001;
@@ -49,6 +61,7 @@ namespace RunAlternative
         {            
             this.KeyDown += RA_KeyDown;
             Activated += RA_Activated;
+            Deactivate += RA_Deactivated;
             Size = new Size(572, 46);
             ProgramList.View = View.Tile;            
             ProgramList.LargeImageList = ImageList;
@@ -66,11 +79,17 @@ namespace RunAlternative
             {
                 ProgramList.Items.Add("Item " + i);
             }
+
         }
         // Controls applied as soon as the form opens ↑
+        private void RA_Deactivated(object sender, EventArgs e)
+        {
+            ShowWindow(this.Handle, SW_HIDE); // Formu gizle
+        }
         // Activate Code ↓
         private void RA_Activated(object sender, EventArgs e)
         {
+            ShowWindow(this.Handle, SW_SHOW); // Formu göster
             CommandBox.Focus();            
         }
         // Activate code ↑
@@ -273,60 +292,25 @@ namespace RunAlternative
             List<string> results = new List<string>();
             string[] allDirectories, programFiles, programFiles86, windowsFiles, programData, userFiles;
 
-            try
+            void AddDirectoriesAndExeFiles(string path)
             {
-                allDirectories = Directory.GetDirectories(@"C:\");
-                results.AddRange(allDirectories.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
+                try
+                {
+                    var directories = Directory.GetDirectories(path);
+                    results.AddRange(directories.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
+
+                    var exeFiles = Directory.GetFiles(path, "*.exe");
+                    results.AddRange(exeFiles.Where(file => Path.GetFileName(file).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
+                }
+                catch (UnauthorizedAccessException) { }
             }
-            catch (UnauthorizedAccessException) { }
 
-            try
-            {
-                programFiles = Directory.GetDirectories(@"C:\Program Files");
-                results.AddRange(programFiles.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
-            }
-            catch (UnauthorizedAccessException) { }
-
-            try
-            {
-                programFiles86 = Directory.GetDirectories(@"C:\Program Files (x86)");
-                results.AddRange(programFiles86.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
-            }
-            catch (UnauthorizedAccessException) { }
-
-            try
-            {
-                windowsFiles = Directory.GetDirectories(@"C:\Windows");
-                results.AddRange(windowsFiles.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
-            }
-            catch (UnauthorizedAccessException) { }
-
-            try
-            {
-                programData = Directory.GetDirectories(@"C:\ProgramData");
-                results.AddRange(programData.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
-            }
-            catch (UnauthorizedAccessException) { }
-
-            try
-            {
-                userFiles = Directory.GetDirectories(@"C:\Users\" + System.Environment.UserName);
-                results.AddRange(userFiles.Where(dir => Path.GetFileName(dir).StartsWith(query, StringComparison.OrdinalIgnoreCase)));
-            }
-            catch (UnauthorizedAccessException) { }
-
-            string[] allowedExtensions = { ".exe", ".dll", ".txt" };
-
-            try
-            {
-                var allFiles = Directory.GetFiles(@"C:\", "*.*", SearchOption.AllDirectories)
-                    .Where(file => allowedExtensions.Contains(Path.GetExtension(file).ToLower()))
-                    .Where(file => Path.GetFileName(file).StartsWith(query, StringComparison.OrdinalIgnoreCase));
-
-                results.AddRange(allFiles);
-            }
-            catch (UnauthorizedAccessException) { }
-            catch (DirectoryNotFoundException) { }
+            AddDirectoriesAndExeFiles(@"C:\");
+            AddDirectoriesAndExeFiles(@"C:\Program Files");
+            AddDirectoriesAndExeFiles(@"C:\Program Files (x86)");
+            AddDirectoriesAndExeFiles(@"C:\Windows");
+            AddDirectoriesAndExeFiles(@"C:\ProgramData");
+            AddDirectoriesAndExeFiles(@"C:\Users\" + Environment.UserName);
 
             return results;
         }
@@ -530,7 +514,7 @@ namespace RunAlternative
 
         private void ProcessPanel_MouseLeave(object sender, EventArgs e)
         {
-            ProcessPanel.BackColor = Color.FromArgb(18,18,18);
+            ProcessPanel.BackColor = Color.FromArgb(51,51,51);
             ProcessPanelDesLabel.ForeColor = Color.White;
             ProcessPanelDesLabel.BackColor = ProcessPanel.BackColor;
             ProcessPanelLabel.ForeColor = Color.White;                   
